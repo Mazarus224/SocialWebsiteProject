@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malik Robinson | Sign In / Sign Up</title>
-  <link rel="stylesheet" href="stylesheet.css" />
+  <title>Student Social | Sign In / Sign Up</title>
+  <link rel="stylesheet" href="#" />  <!-- Link CSS here -->
 </head>
 
 <body>
@@ -155,16 +155,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   </main>
 
+
+
+</body>
 <footer style="margin-top: 4rem;">
   <address>
-    <p>&copy; 2025 Malik Robinson. All rights reserved.</p>
+    <p>&copy; 2025 Malik Robinson, Ben Gives. All rights reserved.</p>
     <p><a href="termsandcons.html">Terms and Conditions</a></p>
     <p><a href="privacy.html">Privacy Policy</a></p>
     <p><a href="cookie.html">Cookie Policy</a></p>
   </address>
 </footer>
-
-</body>
 </html>
 
 

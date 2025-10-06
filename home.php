@@ -27,7 +27,10 @@ if (file_exists($posts_file)) {
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Social | Home Page</title>
+  <link rel="stylesheet" href="#" /> <!-- Link CSS here -->
 </head>
 <body>
   <h1>Welcome, <?php echo htmlspecialchars($_SESSION['user']); ?>!</h1>
@@ -52,8 +55,14 @@ if (file_exists($posts_file)) {
   }
   ?>
 </body>
-<footer>
-  <a href="logout.php">Log out</a>
-</footer>  
+ <footer style="margin-top: 4rem;">
+    <address>
+      <p>&copy; 2025 Malik Robinson, Ben Gives. All rights reserved.</p>
+      <p><a href="termsandcons.html">Terms and Conditions</a></p>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+      <p><a href="cookie.html">Cookie Policy</a></p>  
+      <a href="logout.php">Log out</a>
+    </address>
+  </footer>
 </html>
-
+ 
