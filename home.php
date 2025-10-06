@@ -43,7 +43,7 @@ if (file_exists($posts_file)) {
   <p>Timeline:</p>
   <?php
   if (!empty($allPosts)) {
-      $allPosts = array_reverse($allPosts);  // Optional: show newest posts first
+      $allPosts = array_reverse($allPosts);  //show newest posts first
       foreach ($allPosts as $post) {
           echo "<p>" . htmlspecialchars($post) . "</p>";
       }
