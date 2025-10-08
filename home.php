@@ -31,8 +31,12 @@ if (file_exists($posts_file)) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Student Social | Home Page</title>
   <link rel="stylesheet" href="#" /> <!-- Link CSS here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap CSS link -->
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS link -->
   <h1>Welcome, <?php echo htmlspecialchars($_SESSION['user']); ?>!</h1>
   <p>You are logged in.</p>
 
