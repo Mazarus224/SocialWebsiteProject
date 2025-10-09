@@ -31,13 +31,14 @@ if (file_exists($posts_file)) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Student Social | Home Page</title>
   <link rel="stylesheet" href="stylesheets.css" /> <!-- Link CSS here -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <!-- Bootstrap CSS link -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  Bootstrap CSS link -->
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <!-- Bootstrap JS link -->
-  <h1>Welcome, <?php echo htmlspecialchars($_SESSION['user']); ?>!</h1>
+  <div class="container">
+  <div class="left2">
+
+  <h1>Welcome,  <span class="highlight2"><?php echo htmlspecialchars($_SESSION['user']); ?></span>!</h1>
   <p>You are logged in.</p>
 
   <p>Tell us what's on your mind:</p>
@@ -46,8 +47,9 @@ if (file_exists($posts_file)) {
       <textarea id="user_text" name="user_text" rows="5" cols="40"></textarea><br>
       <input type="submit" value="Submit">
   </form>
-
-  <p>Timeline:</p>
+</div>
+  <div class="right2">
+  <h2><span class="highlight2">Timeline:</span></h2>
   <?php
   if (!empty($allPosts)) {
       $allPosts = array_reverse($allPosts);  //show newest posts first
@@ -58,15 +60,21 @@ if (file_exists($posts_file)) {
       echo "<p>No posts yet. Be the first to post something!</p>";
   }
   ?>
-</body>
- <footer style="margin-top: 4rem;">
-    <address>
-      <p>&copy; 2025 Malik Robinson, Ben Gives. All rights reserved.</p>
-      <p><a href="termsandcons.html">Terms and Conditions</a></p>
-      <p><a href="privacy.html">Privacy Policy</a></p>
-      <p><a href="cookie.html">Cookie Policy</a></p>  
-      <a href="logout.php">Log out</a>
-    </address>
+  </div>
+  <footer>
+    <div class="footerText">
+      <div class="name"> 
+        <p>&copy; 2025 Malik Robinson, Ben Givens. All rights reserved.</p> 
+      </div>
+      <div class="Links">
+        <p><a href="index.html">Main Page</a></p>
+        <p><a href="forms.php">Sign in / Up</a></p>
+        <p><a href="termsandcons.html">Terms and Conditions</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p><a href="cookie.html">Cookie Policy</a></p>  
+      </div>
+    </div>
   </footer>
+</body>
 </html>
  

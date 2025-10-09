@@ -76,30 +76,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <!-- Bootstrap JS link -->
-  <header>
-    <h1>Sign up Form</h1>
-  </header>
+  < <div class="container">
+      <div class="left1">
+      <section id="signup">
+        <h2>Sign Up</h2>
+        <p>Create an account to get access to this social network.</p>
 
-  <main>
-    <nav>
-    <ul style="list-style: none; display: flex; gap: 1rem; justify-content: center; padding: 0;">
-    <li><a href="index.html">Home</a></li>
-    </ul>
-  </nav>
+        <?php if ($signup_error): ?>
+          <p style="color: red;"><?php echo htmlspecialchars($signup_error); ?></p>
+        <?php elseif ($signup_success): ?>
+          <p style="color: green;"><?php echo htmlspecialchars($signup_success); ?></p>
+        <?php endif; ?>
 
-    <section id="signup" style="margin-top: 3rem;">
-      <h2>Sign Up</h2>
-      <p>Create an account to get access to this social network.</p>
-
-      <?php if ($signup_error): ?>
-        <p style="color: red;"><?php echo htmlspecialchars($signup_error); ?></p>
-      <?php elseif ($signup_success): ?>
-        <p style="color: green;"><?php echo htmlspecialchars($signup_success); ?></p>
-      <?php endif; ?>
-
-      <form action="forms.php" method="post">
+        <form action="forms.php" method="post">
         <fieldset>
           <legend><strong>Account Information</strong></legend>
 
@@ -123,53 +112,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <button type="submit">Sign Up</button>
         </fieldset>
       </form>
-    </section>
+      </section>
+      </div>
+      <div class="right1">
+        <section id="signin">
+          <h2>Sign In</h2>
+          <p>Hi! Log in to your account to access personalized content.</p>
 
-    <hr style="margin: 4rem auto; width: 60%;" />
+          <?php if ($signin_error): ?>
+            <p style="color: red;"><?php echo htmlspecialchars($signin_error); ?></p>
+          <?php endif; ?>
 
-    <section id="signin">
-      <h2>Sign In</h2>
-      <p>Welcome back! Log in to your account to access personalized content.</p>
+          <form action="forms.php" method="post">
+            <fieldset>
+              <legend><strong>Login Credentials</strong></legend>
 
-      <?php if ($signin_error): ?>
-        <p style="color: red;"><?php echo htmlspecialchars($signin_error); ?></p>
-      <?php endif; ?>
+              <label for="signin-email">Email:</label><br />
+              <input type="email" id="signin-email" name="signin-email" placeholder="Enter your email" required /><br /><br />
 
-      <form action="forms.php" method="post">
-        <fieldset>
-          <legend><strong>Login Credentials</strong></legend>
+              <label for="signin-password">Password:</label><br />
+              <input type="password" id="signin-password" name="signin-password" placeholder="Enter your password" required /><br /><br />
 
-          <label for="signin-email">Email:</label><br />
-          <input type="email" id="signin-email" name="signin-email" placeholder="Enter your email" required /><br /><br />
+              <label>
+                <input type="checkbox" name="remember" />
+                Remember me
+              </label><br /><br />
 
-          <label for="signin-password">Password:</label><br />
-          <input type="password" id="signin-password" name="signin-password" placeholder="Enter your password" required /><br /><br />
+              <button type="submit" class="submit" >Sign In</button>
+            </fieldset>
+          </form>
 
-          <label>
-            <input type="checkbox" name="remember" />
-            Remember me
-          </label><br /><br />
-
-          <button type="submit">Sign In</button>
-        </fieldset>
-      </form>
-
-      <p>Forgot your password? <a href="passreset.html">Click here to reset it</a>.</p>
-    </section>
-
-  </main>
-
-
-
+          <p>Forgot your password? <a href="passreset.html">Click here to reset it</a>.</p>
+        </section>
+      </div>
+    </div>
+<footer>
+    <div class="footerText">
+      <div class="name"> 
+        <p>&copy; 2025 Malik Robinson, Ben Givens. All rights reserved.</p> 
+      </div>
+      <div class="Links">
+        <p><a href="index.html">Main Page</a></p>
+        <p><a href="forms.php">Sign in / Up</a></p>
+        <p><a href="termsandcons.html">Terms and Conditions</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p><a href="cookie.html">Cookie Policy</a></p>  
+      </div>
+    </div>
+  </footer>
 </body>
-<footer style="margin-top: 4rem;">
-  <address>
-    <p>&copy; 2025 Malik Robinson, Ben Gives. All rights reserved.</p>
-    <p><a href="termsandcons.html">Terms and Conditions</a></p>
-    <p><a href="privacy.html">Privacy Policy</a></p>
-    <p><a href="cookie.html">Cookie Policy</a></p>
-  </address>
-</footer>
 </html>
 
 
